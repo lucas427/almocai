@@ -1,0 +1,47 @@
+<div class="section banner banner--14 valign-wrapper">
+  <div class="row">
+    <div class="col s12">
+      <h1 class="banner__titulo">Redefinir</h1>
+      <h4 class="banner__subtitulo">senha</h4>
+    </div>
+  </div>
+</div>
+
+{{msg_email_enviado}}
+
+<div class="container" id="body">
+	<div class="row">
+		<div class="col s12 m10 offset-m1 l8 offset-l2 xl6 offset-xl3">
+			<div class="card-panel hoverable">
+				<p>Caso tenha esquecido sua senha, digite seu e-mail abaixo. Enviaremos então os passos seguintes para que possa redefinir sua senha.</p>		
+			
+			<form action="" method="POST">
+				<div class="row">
+					<div class="col s12 input-field">
+						<label for="email">Digite seu e-mail</label>
+						<input type="email" name="email" id="email" />
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col s12 input-field center">
+						<button type="submit" onclick="solicitacao()" class="btn almocai waves-effect waves-light bold acessar-interface-btn">
+							<i class="material-icons right">send</i>
+							Redefinir senha
+						</button>
+					</div>
+				</div>
+			</form>
+			<p>Se você não informou o seu email em seu perfil ao acessar o sistema, entre em contato com a Coordenação Geral de Ensino.</p>
+
+		</div>
+	</div>
+</div>
+
+<script>
+	function solicitacao() {
+		document.getElementById("spinner-container").style.opacity = "1";
+		document.getElementById("spinner-container").style.zIndex = "9999";
+
+	}
+</script>

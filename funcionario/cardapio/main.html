@@ -1,0 +1,37 @@
+<div class="section banner valign-wrapper banner--8">
+  <div class="row">
+    <div class="col s12">
+      <h1 class="banner__titulo">Gerenciar cardápio</h1>
+      <h4 class="banner__subtitulo">{intervalo_semana}</h4>
+    </div>
+  </div>
+</div>
+
+<div class="container margin-top-small">
+  {{ cardapio_indisponivel }}
+  
+    <div class="row" style="margin-top: .75rem;">
+      {{ add_alimento_semana }}
+    </div>
+    
+    <div class="row  margin-top-small">
+      {{ dias }}
+    </div>
+
+    <div style="height: .25rem;"></div>
+
+  <!-- por usabilidade -->
+  <div class="row center">
+    <div class="col s12">
+      <a
+        href="{root_path}funcionario/cardapios/"
+        class="btn btn-large almocai bold waves-effect acessar-interface-btn"
+      >
+        <i class="material-icons left">keyboard_backspace</i>
+        Voltar
+      </a>
+    </div>
+  </div>
+
+  <div style="height: 3rem;"></div>
+</div>

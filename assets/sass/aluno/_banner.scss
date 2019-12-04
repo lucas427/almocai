@@ -1,0 +1,132 @@
+// Estilo para o banner do cardápio
+.banner {
+  
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/fundo-banner.jpg);
+  background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/fundo-banner.jpg);
+  background-position: center top;
+
+  // Cardápio
+
+  // &--1 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/aluno/fundo-cardapio.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/aluno/fundo-cardapio.jpg);
+  // }
+  // // Página inicial
+  // &--2 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/aluno/fundo-pagina-inicial.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/aluno/fundo-pagina-inicial.jpg);
+  // }
+  // // Perfil
+  // &--3 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/aluno/fundo-perfil.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/aluno/fundo-perfil.jpg);
+  // }
+
+  // // Admnistrador --> Página Inicial
+  // &--4 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/adm/fundo-pagina-inicial.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/adm/fundo-pagina-inicial.jpg);
+  // }
+  // // Admnistrador --> Aluno
+  // &--5 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/adm/fundo-aluno.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/adm/fundo-aluno.jpg);
+  // }
+  // // Admnistrador --> Funcionário
+  // &--6 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/adm/fundo-funcionario.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/adm/fundo-funcionario.jpg);
+  // }
+  // // Admnistrador --> Nutricionista
+  // &--7 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/adm/fundo-nutricionista.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/adm/fundo-nutricionista.jpg);
+  // }
+
+  // // Funcionário --> Página Inicial
+  // &--8 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/funcionario/fundo-pagina-inicial.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/funcionario/fundo-pagina-inicial.jpg);
+  // }
+
+  // // Funcionário --> Cardapios
+  // &--9 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/funcionario/fundo-cardapios.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/funcionario/fundo-cardapios.jpg);
+  // }
+  
+  // // Funcionário --> Gerenciar cardapio
+  // &--10 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/funcionario/gerenciar-cardapio.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/funcionario/gerenciar-cardapio.jpg);
+  // }
+
+  // // Sobre
+  // &--11 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/sobre/fundo.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/sobre/fundo.jpg);
+  // }
+
+  // // Intolerancia aluno
+  // &--12 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/aluno/fundo-intolerancia.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/aluno/fundo-intolerancia.jpg);
+  // }
+
+  // // Funcionário --> Gerenciar intolerãncia
+  // &--13 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/funcionario/intolerancia.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/funcionario/intolerancia.jpg);
+  // }
+
+  // // Entrar --> Recuperar senha
+  // &--14 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/entrar/recuperar.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/entrar/recuperar.jpg);
+  // }
+  
+  // // Entrar --> Redefinir senha
+  // &--15 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/entrar/redefinir.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/entrar/redefinir.jpg);
+  // }
+  
+  // // FAQ
+  // &--16 {
+  //   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.6)), to(rgba($primary-color-dark, 0.6))), url(../img/faq/fundo-faq.jpg);
+  //   background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.6), rgba($primary-color-dark, 0.6)), url(../img/faq/fundo-faq.jpg);
+  // }
+
+
+  min-height: 30rem;
+  margin-top: -4.5rem !important;
+  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 0%, 100% 80%, 0% 100%);
+  
+  &__titulo {
+    text-align: center;
+    color: $branco;
+    @extend .nunito;
+    font-size: 5rem;
+  }
+
+  @media #{$medium-only} {
+    &__titulo {
+      font-size: 4rem;
+    }
+  }
+
+  @media #{$small-and-down} {
+    &__titulo {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__subtitulo {
+    text-align: center;
+    color: $branco;
+    font-weight: lighter;
+  }
+
+}

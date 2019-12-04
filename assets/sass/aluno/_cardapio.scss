@@ -1,0 +1,219 @@
+// Estilo do cartão para a confirmação do aluno
+.painel {
+  background-image: -webkit-gradient(linear, right top, left bottom, from($secondary-color-dark), to($secondary-color-light));
+  background-image: linear-gradient(to left bottom, $secondary-color-dark, $secondary-color-light);
+
+  &__title {
+    @extend .almocai-text;
+    @extend .text-branco;
+    @extend .center;
+    @extend .nunito;
+    padding: 1rem;
+    margin: 0;
+  }
+
+}
+
+// Fundos confirmado ou não
+
+.aluno__confirmado {
+  background: rgba(67, 137, 69, .1) !important;
+
+  li {
+
+    &:not(:last-child) {
+      border-bottom: .1rem solid $primary-color !important;
+    }
+
+  }
+
+}
+
+.aluno__negado {
+  background: rgba(228, 12, 43, .1) !important;
+
+  li {
+
+    &:not(:last-child) {
+      border-bottom: .1rem solid $quaternary-color-dark !important;
+    }
+
+  }
+}
+
+// Estilo dos cartões de cardápio
+.cardapio {
+
+  &__indisponivel {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#f42f4b), color-stop(#e42740), color-stop(#d41e36), color-stop(#c4152c), to(#b40922));
+    background-image: linear-gradient(to right bottom, #f42f4b, #e42740, #d41e36, #c4152c, #b40922);
+    & h2 {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      margin: 0;
+      @extend .center;
+      @extend .almocai-text;
+      @extend .text-branco;
+      @extend .nunito;
+    }
+  }
+
+  padding-top: 2rem;
+
+  &__painel {
+    padding: 0;
+    position: relative;
+    @extend .hoverable;
+  }
+
+  &__confirmacao {
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: 0;
+    padding-top: 0;
+
+    &--confirmado {
+      @extend .center;
+      @extend .nunito;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin: 0;
+      font-size: 2rem;
+      color: $primary-color-dark;
+    }
+
+    &--negado {
+      @extend .center;
+      @extend .nunito;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin: 0;
+      font-size: 2rem;
+      color: $quaternary-color-dark;
+    }
+
+    &--title {
+      @extend .center;
+      @extend .nunito;
+      font-size: 1.5rem;
+    }
+
+    &--btn {
+      width: 100% !important;
+      @extend .z-depth-3;
+      &:hover {
+        @extend .z-depth-2;
+      }
+      &:active, :focus {
+        @extend .z-depth-0;
+      }
+
+      &--1 {
+        @extend .z-depth-3;
+        &:hover {
+          @extend .z-depth-2;
+        }
+        &:active, :focus {
+          @extend .z-depth-0;
+        }
+        margin-bottom: 1.75rem;
+        min-width: 50%;
+        @media #{$small-and-down} {
+          min-width: 75%;
+          text-align: center !important
+        }
+      }
+
+    }
+  }
+
+  &__lista {
+    position: relative;
+    margin: 0;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    list-style: none;
+    width: 75%;
+
+    li {
+      text-align: center;
+      font-size: 1rem;
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: .1rem solid #C5C5C5;
+      }
+    }
+
+    &--icon {
+      height: 1rem; 
+      position: absolute; 
+      margin: .25rem auto auto .5rem;
+    }
+
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: color;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    &--1 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, 0.5)), to(rgba($primary-color-dark, 0.5))), url(../img/aluno/cartoes/cartao.jpg);
+      background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.5), rgba($primary-color-dark, 0.5)), url(../img/aluno/cartoes/cartao.jpg);
+    }
+    &--2 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($secondary-color-light, 0.5)), to(rgba($secondary-color-dark, 0.5))), url(../img/aluno/cartoes/cartao.jpg);
+      background-image: linear-gradient(to right bottom, rgba($secondary-color-light, 0.5), rgba($secondary-color-dark, 0.5)), url(../img/aluno/cartoes/cartao.jpg);
+    }
+    &--3 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($tertiary-color-light, 0.5)), to(rgba($tertiary-color-dark, 0.5))), url(../img/aluno/cartoes/cartao.jpg);
+      background-image: linear-gradient(to right bottom, rgba($tertiary-color-light, 0.5), rgba($tertiary-color-dark, 0.5)), url(../img/aluno/cartoes/cartao.jpg);
+    }
+    &--4 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($quaternary-color-light, 0.5)), to(rgba($quaternary-color-dark, 0.5))), url(../img/aluno/cartoes/cartao.jpg);
+      background-image: linear-gradient(to right bottom, rgba($quaternary-color-light, 0.5), rgba($quaternary-color-dark, 0.5)), url(../img/aluno/cartoes/cartao.jpg);
+    }
+  }
+
+  &__cabecalho {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $branco;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__cabecalho-span {
+    padding: .25rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    @extend .nunito;
+    &--1 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($primary-color-light, .6)), to(rgba($primary-color-dark, .6)));
+      background-image: linear-gradient(to right bottom, rgba($primary-color-light, .6), rgba($primary-color-dark, .6));
+    }
+    &--2 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($secondary-color-light, .6)), to(rgba($secondary-color-dark, .6)));
+      background-image: linear-gradient(to right bottom, rgba($secondary-color-light, .6), rgba($secondary-color-dark, .6));
+    }
+    &--3 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($tertiary-color-light, .6)), to(rgba($tertiary-color-dark, .6)));
+      background-image: linear-gradient(to right bottom, rgba($tertiary-color-light, .6), rgba($tertiary-color-dark, .6));
+    }
+    &--4 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($quaternary-color-light, .6)), to(rgba($quaternary-color-dark, .6)));
+      background-image: linear-gradient(to right bottom, rgba($quaternary-color-light, .6), rgba($quaternary-color-dark, .6));
+    }
+  }
+}

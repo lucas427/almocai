@@ -1,0 +1,54 @@
+<li class="collection-item">
+	{descricao}
+
+	<a 
+		href="#intol{codigo}" 
+		class="secondary-content modal-trigger"
+		data-target="intol{codigo}"
+
+	>
+		<i class="material-icons olho">remove_red_eye</i>
+	</a>
+</li>
+
+<div class="modal" id="intol{codigo}">
+	<div class="modal-content" style="padding-bottom: 0;">
+
+		<div class="row">
+			<div class="col s12 perfil__intolerancia">
+
+				<p class="perfil__intolerancia--text">
+					Intolerância alimentar ou alergia apresentada: 
+					<b>{descricao}</b>
+				</p>
+				
+				<p class="perfil__intolerancia--text">
+					Visualizar documento enviado: 
+					<a 
+						href="{doc_path}" 
+						style="margin-left: 1rem"
+						class="btn almocai waves-effect waves-light bold acessar-interface-btn" 
+						download="{username}-{nome}-{descricao}.pdf">
+						Baixar
+						<i class="material-icons right">
+							cloud_download
+						</i>
+					</a>
+				</p>
+
+				<p class="perfil__intolerancia--text">
+						Estado da requisição:
+						<b style="padding: .5rem;" class="legenda {estado_cor}">{estado}</b>
+				</p>
+				
+				{{motivo_rejeicao}}
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="modal-footer">
+		<a href="#!" class="modal-close waves-effect btn-flat">Voltar</a>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="col s12">
+  <div class="card hoverable perfil__cartao-alterar-senha">
+    <h4 class="perfil__cartao-alterar-senha--titulo">Altere seu e-mail</h4>
+    <form action="acao.php" method="post">
+      	<div class="row">
+		
+			<div class="col s12">
+				<div class="input-field col s12">
+					<label for="email">E-mail</label>
+					<input type="email" name="email" id="email" value="{email}" required />
+				</div>
+			</div>
+			
+			<div class="col s12 center">
+				<button class="waves-effect almocai btn bold acessar-interface-btn"
+				type="submit" name="acao" value="AlterarEmail">Alterar</button>
+			</div>
+		
+		</div>
+
+		{sucesso_email}
+
+    </form>
+  </div>
+</div>

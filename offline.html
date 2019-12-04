@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+  <meta name="description" content="Sistema de gerenciamento de almoços." />
+  <meta name="robot" content="noindex" >
+  <meta name="language" content="Portuguese" />
+  <meta name="revisit-after" content="1 day">
+  <meta name="distribution" content="global">
+  <meta name="generator" content="N/A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <meta name="application-name" content="Almoçaí">
+  <meta name="apple-mobile-web-app-title" content="Almoçaí">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, shrink-to-fit=no" />
+
+  <meta name="msapplication-starturl" content="/">
+  <meta name="msapplication-navbutton-color" content="#FAFAFA">
+
+  <meta name="theme-color" content="#FAFAFA"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+
+  <title>Offline - Almoçaí</title>
+
+  <!-- Favicon -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta name="apple-mobile-web-app-title" content="Almoçaí">
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/img/icons/icon-192x192.png">
+  <link rel="shortcut icon" href="assets/img/icons/icon-192x192.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <style>
+    * {
+      font-size: 62.5%;
+      font-family: sans-serif;
+      font-weight: normal;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background: #FAFAFA;
+      text-align: center;
+    }
+
+    .container {
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      align-content: center;
+      justify-content: center;
+    }
+
+    svg {
+      width: 12.8rem;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #438945;
+      margin-bottom: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+  <h1>Erro na conexão!</h1>
+
+  <p>
+    Verifique sua conexão com a rede,<br/>
+     ou tente novamente mais tarde.
+   </p>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4c-1.48 0-2.85.43-4.01 1.17l1.46 1.46C10.21 6.23 11.08 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3 0 1.13-.64 2.11-1.56 2.62l1.45 1.45C23.16 18.16 24 16.68 24 15c0-2.64-2.05-4.78-4.65-4.96zM3 5.27l2.75 2.74C2.56 8.15 0 10.77 0 14c0 3.31 2.69 6 6 6h11.73l2 2L21 20.73 4.27 4 3 5.27zM7.73 10l8 8H6c-2.21 0-4-1.79-4-4s1.79-4 4-4h1.73z" fill="#438945"/></svg>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js', {scope: './'})
+          .then(reg => {
+            console.log('Service worker registered! 😎', reg);
+          })
+          .catch(err => {
+            console.log('😥 Service worker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+</body>
+
+</html>

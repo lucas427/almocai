@@ -1,0 +1,99 @@
+<tr class="{estado_cor}">
+	<td>{codigo}</td>
+	<td>{aluno_nome} ({username})</td>
+	<td>{intolerancia}</td>
+	<td>
+		<a href="{doc_path}" download="{username}-{aluno_nome}-{intolerancia}.pdf" class="btn almocai azul waves-light waves-effect bold acessar-interface-btn">
+			Baixar
+			<i class="material-icons right">cloud_download</i>
+		</a>
+	</td>
+	<td>
+		<a 
+			href=""
+			class="btn almocai azul waves-light waves-effect modal-trigger bold acessar-interface-btn"
+			data-target="alterar{codigo}"
+		>
+			<i class="material-icons">edit</i>
+		</a>
+	</td>
+</tr>
+
+<div class="modal" id="alterar{codigo}">
+	<div class="modal-content" style="padding-bottom: 0;">
+
+		<div class="row">
+			<div class="col s12">
+
+				<p>
+					Nome do aluno: 
+					<b>{aluno_nome}</b>
+				</p>
+				<p>
+					Usuário do aluno:
+					<b>{username}</b>
+				</p>
+				<p>
+					Intolerância ou alergia apresentada:
+					<b>{intolerancia}</b>
+				</p>
+			</div>
+		</div>
+
+		<form action="acao.php" method="POST">
+
+			<input type="hidden" name="codigo" value="{codigo}">
+
+			<div class="row">
+				<div class="col s12">
+					<p>Situação da solicitação: </p>
+					<p>
+						<label>
+							<input type="radio" name="estado" value="pendente" class="with-gap" {checked_pendente} />
+							<span>Pendente</span>
+						</label>						
+					</p>
+
+					<p>
+						<label>
+							<input type="radio" name="estado" value="validar" class="with-gap" {checked_validar} />
+							<span>Validar</span>
+						</label>						
+					</p>
+
+					<p>
+						<label>
+							<input type="radio" name="estado" value="rejeitar" class="with-gap" {checked_rejeitar} />
+							<span>Rejeitar</span>
+						</label>
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12">
+					<label for="motivo_rejeicao">Em caso de rejeição, informe o motivo</label>
+					<textarea 
+						placeholder="Ex: Documentos não válidas para a solicitação."
+						class="materialize-textarea"
+						name="motivo_rejeicao" 
+						id="motivo_rejeicao" 
+					>{motivo_rejeicao}</textarea>
+				</div>			
+			</div>
+
+			<div class="row">
+				<div class="col s12 center">
+					<button name="acao" value="alterarEstadoIntolerancia" class="btn waves-effect waves-light almocai bold acessar-interface-btn">
+						<i class="material-icons left">send</i>
+						Salvar
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="modal-footer">
+		<a href="#!" class="modal-close waves-effect waves-light btn-flat left">Voltar</a>
+	</div>
+</div>

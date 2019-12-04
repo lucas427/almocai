@@ -1,0 +1,36 @@
+<div class="hide-on-small-only col m2 l4" id="addSemana"></div>
+
+<div class="col s12 m8 l4 center">
+  <div class="funcionario__cardapio-add">
+    <h5 class="funcionario__cardapio-add--title text-azul">
+      Adicionar em todos os dias
+    </h5>
+
+    <form method="POST" action="acao.php">
+      <input type="hidden" name="semana_cod" id="semana_cod" value="{semana_cod}" />
+
+      <div class="row center-align">
+        <div class="input-field col s12">
+          <input id="nome" name="nome" type="text" required />
+          <label for="nome">Alimento</label>
+        </div>
+
+        <div class="col s12">
+          <div class="col s12">
+          <button 
+            class="waves-effect waves-light btn azul almocai bold acessar-interface-btn" type="submit" name="acao"
+            id="acao" value="AddAlimentoSemana"
+          >
+            <i class="material-icons left">add</i>
+            Adicionar
+          </button>
+        </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</div>
+
+<div class="hide-on-small-only col m2 l4"></div>
+

@@ -1,0 +1,26 @@
+<div class="section banner valign-wrapper banner--2">
+  <div class="row">
+    <div class="col s12">
+      <h1 class="banner__titulo">Bem vindo!</h1>
+      <h4 class="banner__subtitulo">{nome}</h4>
+    </div>
+  </div>
+</div>
+
+<div class="section container">
+
+  <!-- Mensagem ao usuário caso já tenha passado das 10h e os botões estejam indisponíveis -->
+  
+
+  <div class="row">
+    <!-- Confimação do aluno -->
+    {{cartao_presenca}}
+
+    <!-- Primeiro cartão -->
+    {{cartao_dia}}
+
+  </div>
+</div>
+
+<!-- Mensagem caso não haja cardápio -->
+{{cardapio_indisponivel}}

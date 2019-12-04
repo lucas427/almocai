@@ -1,0 +1,66 @@
+<tr>
+  <td>{codigo}</td>
+  <td>{username}</td>
+  <td>{nome}</td>
+  <td>{email}</td>
+
+  <!-- Alterar usuário -->
+  <td><a href="#alterar{codigo}" class="modal-trigger"><i class="material-icons adm__tabela--alterar">edit</i></a></td>
+
+  <div id="alterar{codigo}" class="modal adm__tabela--alterar-modal">
+    <form action="{root_path}administrador/acao.php" method="post">
+      <div class="modal-content">
+        <h4 class="almocai-text {cor_texto}">Alterar informações</h4>
+
+        <div class="row">
+          <input type="hidden" name="codigo" value="{codigo}"/>
+          <input type="hidden" name="tipo" value="{tipo}" />
+
+          <div class="input-field col s12">
+            <input id="nome{codigo}" name="nome" type="text" value="{nome}" required maxlength="255">
+            <label for="nome{codigo}">Nome</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="username{codigo}" name="username" type="text" value="{username}" required maxlength="100">
+            <label for="username{codigo}">Username</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="senha{codigo}" name="senha" type="password" placeholder="Senha (deixe vazia para não alterar)">
+            <label for="senha{codigo}">Senha</label>
+          </div>
+        </div>
+
+        <div class="modal-footer row">
+          <div class="col s12 center m2">
+            <a class="modal-close waves-effect waves-almocai btn-flat">Cancelar</a>
+          </div>
+          <div class="col s12 m2 offset-m8 center">
+            <button class="waves-effect waves-light btn adm__inserir--btn almocai {cor_btn} bold"
+            type="submit" name="acao" value="Update">
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Excluir usuário -->
+  <td><a href="#excluir{codigo}" class="modal-trigger"><i class="material-icons adm__tabela--excluir">delete</i></a>
+  </td>
+
+  <div id="excluir{codigo}" class="modal adm__tabela--excluir-modal">
+    <div class="modal-content">
+      <h4 class="adm__tabela--excluir-modal-titulo">Você realmente deseja remover {nome}?</h4>
+      <h4 class="adm__tabela--excluir-modal-text">- Lembre-se, esta operação não poderá ser desfeita -</h4>
+    </div>
+    <div class="modal-footer transparent">
+      <a class="modal-close waves-effect waves-almocai btn-flat left almocai-text text-branco bold">Cancelar</a>
+      <a
+        class="waves-effect waves-light btn adm__inserir--btn almocai branco almocai-text text-vermelho right bold"
+        href="{root_path}administrador/acao.php?acao=Delete&codigo={codigo}&tipo={tipo}">
+          Confirmar
+        </a>
+    </div>
+  </div>
+</tr>

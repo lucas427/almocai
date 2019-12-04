@@ -1,0 +1,49 @@
+<style type="text/css">
+  .legenda {
+	  border-radius: 8px;
+  }
+
+  .validada {
+    background-color: rgba(67, 137, 69, .3);
+  }
+
+  .pendente {
+    background-color: rgba(235, 166, 63, .3);
+  }
+
+  .rejeitada {
+    background-color: rgba(228, 12, 43, .3);
+  }
+</style>
+
+<div class="col s12">
+  <div class="card hoverable perfil__cartao-intolerancia">
+    <h4 class="perfil__cartao-intolerancia--titulo">
+      Você possui alguma intolerância alimentar ou alergia?
+    </h4>
+    <div class="row">
+      <div class="col s12 center">
+
+        <a 
+          class="btn waves-effect waves-light almocai bold acessar-interface-btn"
+          href="{root_path}aluno/intolerancias/"
+        >
+          Adicionar
+        </a>
+
+        
+      </div>
+    </div>
+
+    <div style="height: 1.2rem;"></div>
+
+    <div class="row">
+      <div class="col s12">
+        <ul class="collection" id="ul_intolerancia">
+          {{intolerancias}}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

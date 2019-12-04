@@ -1,0 +1,41 @@
+<div class="col s12 m6 xl3" id="{dia_cod}">
+  <div class="card-panel cardapio__painel {fundo_cor}">
+    <div class="cardapio__picture cardapio__picture--{num_dia}"></div>
+    <h4 class="cardapio__cabecalho">
+      <span class="cardapio__cabecalho-span cardapio__cabecalho-span--{num_dia}">{dia_semana}</span>
+    </h4>
+    <div class="row">
+      <div class="col s12">
+        <p class="{cor_texto_presenca}">{texto_presenca}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <ul class="cardapio__lista">
+          {{alimentos}}
+        </ul>
+      </div>
+    </div>
+    <div class="row cardapio__confirmacao">
+      <form class="col s12 center-align" action="{root_path}aluno/acao.php" method="post">
+        <p class="cardapio__confirmacao--title">Almocará no IFC neste dia?</p>
+        <div class="row">
+          <div class="col s6 center">
+            <button {disabled} class="waves-effect btn cardapio__confirmacao--btn"
+            type="submit" name="acao" id="acao" value="PresencaSim" >
+              Sim
+            </button>
+          </div>
+          <div class="col s6 center">
+            <button {disabled} class="waves-effect btn cardapio__confirmacao--btn almocai vermelho"
+            type="submit" name="acao" id="acao" value="PresencaNao">
+              Não
+            </button>
+          </div>
+        </div>
+        <input type="hidden" name="dia_cod" id="dia_cod" value="{dia_cod}">
+        <input type="hidden" name="redir" id="redir" value="cardapio">
+      </form>
+    </div>
+  </div>
+</div>

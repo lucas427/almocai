@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta name="description" content="Sistema de gerenciamento de almoços." />
+  <meta name="robot" content="noindex" >
+  <meta name="language" content="Portuguese" />
+  <meta name="revisit-after" content="1 day">
+  <meta name="distribution" content="global">
+  <meta name="generator" content="N/A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <meta name="application-name" content="Almoçaí">
+  <meta name="apple-mobile-web-app-title" content="Almoçaí">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, shrink-to-fit=no" />
+
+  <meta name="msapplication-starturl" content="{root_path}">
+  <meta name="msapplication-navbutton-color" content="#FAFAFA">
+
+  <meta name="theme-color" content="#FAFAFA"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+
+  <title>{title} - Almoçaí</title>
+
+  <!-- Favicon -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta name="apple-mobile-web-app-title" content="Almoçaí">
+  <link rel="apple-touch-icon" sizes="192x192" href="{root_path}assets/img/icons/icon-192x192.png">
+  <link rel="shortcut icon" href="{root_path}assets/img/icons/icon-192x192.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="{root_path}manifest.json">
+
+  <!-- Pageloader -->
+  <style>
+    #spinner-container { height: 100%; width: 100%; background: #fafafa; position: fixed; left: 0; top: 0; z-index: 9999; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+    #spinner { -webkit-animation: rotator 1.4s linear infinite; animation: rotator 1.4s linear infinite; }
+    @-webkit-keyframes rotator { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { -webkit-transform: rotate(270deg); transform: rotate(270deg); } }
+    @keyframes rotator { 0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); } 100% { -webkit-transform: rotate(270deg); transform: rotate(270deg); } }
+    #path { stroke-dasharray: 187; stroke-dashoffset: 0; -webkit-transform-origin: center; transform-origin: center; -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite; animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite; }
+    @-webkit-keyframes colors { 0% { stroke: #438945; } 25% { stroke: #3cbcc3; } 50% { stroke: #Feba63; } 75% { stroke: #e40c2b; } 100% { stroke: #438945; } }
+    @keyframes colors { 0% { stroke: #438945; } 25% { stroke: #3cbcc3; } 50% { stroke: #Feba63; } 75% { stroke: #e40c2b; } 100% { stroke: #438945; } }
+    @-webkit-keyframes dash { 0% { stroke-dashoffset: 187; } 50% { stroke-dashoffset: 46.75; -webkit-transform: rotate(135deg); transform: rotate(135deg); } 100% { stroke-dashoffset: 187; -webkit-transform:rotate(450deg); transform:rotate(450deg); } }
+    @keyframes dash { 0% { stroke-dashoffset: 187; } 50% { stroke-dashoffset: 46.75; -webkit-transform: rotate(135deg); transform: rotate(135deg); } 100% { stroke-dashoffset: 187; -webkit-transform:rotate(450deg); transform:rotate(450deg); } }
+  </style>
+
+  <!-- Fontes -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400{peso_fonte}" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link href="{root_path}assets/css/almocai.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div id="spinner-container">
+    <svg id="spinner" width="15vh" height="15vh" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+    <circle id="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+  </div>
+
+  <header>
+    {{nav}}
+  </header>
+
+  <main>
+    {{main}}
+  </main>
+
+  <footer>
+    {{footer}}
+  </footer>
+
+  <!-- JS -->
+  <script src="{root_path}assets/js/almocai.min.js"></script>
+  <script>
+    {{scripts}}
+  </script>
+  <script>
+    window.addEventListener("load", function()  {
+      document.getElementById("spinner-container").style.opacity = "0";
+      document.getElementById("spinner-container").style.zIndex = "-999";
+    });
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('{root_path}service-worker.js', {scope: '{root_path}'})
+          .then(reg => {
+            console.log('Service worker registered! 😎', reg);
+          })
+          .catch(err => {
+            console.log('😥 Service worker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

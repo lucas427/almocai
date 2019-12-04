@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col s12 card adm__tabela">
+    <h3 class="adm__tabela--subtitulo {cor_texto}">Listagem de {tipo}s</h3>
+
+    <!-- Pesquisar aluno -->
+    <form class="row" action="" method="post">
+      <div class="input-field col s12 m6 offset-m3 l4 offset-l4">
+        <i class="material-icons prefix">search</i>
+        <input id="pesquisa" type="text" name="pesquisa">
+        <label for="pesquisa">Pesquisa</label>
+      </div>
+    </form>
+
+    <div class="divider"></div>
+
+    <table class="highlight centered responsive-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Alterar</th>
+          <th>Excluir</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {{linhas_usuario}}
+      </tbody>
+    </table>
+  </div>
+</div>

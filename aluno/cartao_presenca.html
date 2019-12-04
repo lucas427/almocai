@@ -1,0 +1,32 @@
+
+<div class="col s12 m6 l7 xl8">
+	
+	{{disabled_msg}}
+	
+	<div class=" col s12 l8 offset-l2">
+		<div class="card-panel hoverable {fundo_cor}">
+			<form class="row" action="acao.php" method="post">
+				<h4 class="confirmacao-aluno__titulo almocai-text text-{cor}"> Você irá almoçar no IFC hoje?</h4>
+				<h6 class="confirmacao-aluno__data">{data_hoje}</h6>
+				<div class="col s6 center">
+					<button type="submit" name="acao" id="acao" value="PresencaSim" {disabled}
+					class="btn almocai waves-effect waves-light login-section__button">
+						Sim
+					</button>
+				</div>
+				<div class="col s6 center">
+					<button type="submit" name="acao" id="acao" value="PresencaNao" {disabled}
+						class="waves-effect btn almocai vermelho waves-effect waves-light login-section__button">
+						Não
+					</button>
+				</div>
+				<input type="hidden" name="dia_cod" id="dia_cod" value="{dia_cod}">
+				<input type="hidden" name="redir" id="redir" value="index">
+			</form>
+			
+			{{cartao_presenca_selecionada}}
+
+		</div>
+		
+	</div>
+</div>

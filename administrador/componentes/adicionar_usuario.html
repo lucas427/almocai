@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col s12 card adm__inserir">
+    <h3 class="adm__tabela--subtitulo {cor_texto}">Adicionar {tipo}</h3>
+    
+    <form action="{root_path}administrador/acao.php" method="post">
+
+      <input type="hidden" name="tipo" id="tipo" value="{tipoBD}">
+
+      <div class="row">
+        
+        <div class="input-field col s12">
+          <input id="nome" type="text" name="nome" required maxlength="255" placeholder="Ex: Fulano da Silva"/>
+          <label for="nome">Nome completo</label>
+        </div>        
+
+        <div class="input-field col s12 m8 ">
+          <input id="username" type="text" name="username" maxlength="100" required placeholder="Ex: fulano.silva" />
+          <label for="username">Nome de usuário</label>
+          <span class="helper-text" data-error="Este nome de usuário já está em uso" data-success=""></span>
+        </div>
+        
+        <div class="input-field col s12 m4 adm__inserir--remove-margin">
+          <input id="senha" type="password" name="senha" required />
+          <label for="senha">Senha</label>
+        </div>
+        
+        <div class="col s12 center">          
+          <button class="waves-effect waves-light btn adm__inserir--btn almocai {cor_btn} bold"
+          type="submit" name="acao" value="Insert" id="adicionar">
+            Adicionar</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

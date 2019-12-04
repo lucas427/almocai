@@ -1,0 +1,186 @@
+.padding-card-small {
+  padding: 1rem;
+}
+
+.perfil {
+
+  &__dismiss {
+    padding: 1rem;
+    color: $branco;
+    transition: color .3s ease-in;
+    &:hover {
+      color: rgba($branco, .6);
+    }
+  }
+
+  &__intolerancia {
+    padding: 1rem 1rem 0 1rem;
+
+    &--text {
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+
+  }
+
+  &__cartao-almoca {
+
+    padding: 2rem;
+    
+    &--radio {
+      text-align: center;
+      margin-top: 2rem;
+      
+    }
+    
+    &--titulo {
+      @extend .center;
+      @extend .almocai-text;
+      @extend .text-azul;
+    }
+
+    .radio-azul {
+      [type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::before, [type="radio"].with-gap:checked + span::after {
+        border: 2px solid $secondary-color !important;
+      }
+      [type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::after {
+        background-color: $secondary-color !important;
+      }
+      [type="radio"]:not(:checked) + span::before, [type="radio"]:not(:checked) + span::after {
+        border: 2px solid $secondary-color !important;
+      }
+    }
+
+  }
+
+  &__cartao-intolerancia {
+
+    padding: 2rem;
+
+    &--titulo {
+      @extend .center;
+      @extend .almocai-text;
+    }
+
+  }
+
+  &__cartao-vegetariano {
+
+    padding: 2rem;
+    
+    &--radio {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    &--titulo {
+      @extend .center;
+      @extend .almocai-text;
+      @extend .text-amarelo;
+    }
+
+    .radio-amarelo {
+      [type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::before, [type="radio"].with-gap:checked + span::after {
+        border: 2px solid $tertiary-color !important;
+      }
+      [type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::after {
+        background-color: $tertiary-color !important;
+      }
+      [type="radio"]:not(:checked) + span::before, [type="radio"]:not(:checked) + span::after {
+        border: 2px solid $tertiary-color !important;
+      }
+    }
+
+  }
+
+  &__cartao-vegano {
+
+    padding: 2rem;
+    
+    &--radio {
+      text-align: center;
+      margin-top: 2rem; 
+    }
+    
+    &--titulo {
+      @extend .center;
+      @extend .almocai-text;
+    }
+
+  }
+
+  &__cartao-carne {
+
+    padding: 2rem;
+
+    &--checkbox {
+      text-align: justify;
+      margin-top: 2rem;
+    }
+
+    &--titulo {
+      @extend .center;
+      @extend .almocai-text;
+      @extend .text-vermelho;
+    }
+
+    .checkbox-vermelho {
+      [type="checkbox"].filled-in:checked + span:not(.lever)::after {
+        border: 2px solid $quaternary-color !important;
+        background-color: $quaternary-color !important;
+      }
+      [type="checkbox"].filled-in:not(:checked) + span:not(.lever)::after {
+        border: 2px solid $quaternary-color;
+      }
+    }
+
+  }
+
+  &__cartao-alterar-senha {
+
+    padding: 2rem;
+
+    &--titulo {
+      @extend .center;
+      @extend .almocai-text;
+    }
+
+  }  
+
+}
+
+.errado {
+  .input-field label {
+    color: $quaternary-color !important;
+  }
+  .input-field input[type=text]:focus + label {
+    color: $quaternary-color !important;
+  }
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid $quaternary-color !important;
+    -webkit-box-shadow: 0 1px 0 0 $quaternary-color !important;
+            box-shadow: 0 1px 0 0 $quaternary-color !important;
+  }
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid $quaternary-color !important;
+    -webkit-box-shadow: 0 1px 0 0 $quaternary-color !important;
+            box-shadow: 0 1px 0 0 $quaternary-color !important;
+  }
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid $quaternary-color !important;
+    -webkit-box-shadow: 0 1px 0 0 $quaternary-color !important;
+            box-shadow: 0 1px 0 0 $quaternary-color !important;
+  }
+  .input-field .prefix.active {
+    color: $quaternary-color !important;
+  }
+}
+
+.olho {
+  color: $primary-color !important;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+  &:hover {
+    color: $primary-color-dark !important;
+  }
+}

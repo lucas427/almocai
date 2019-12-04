@@ -1,0 +1,117 @@
+// Seção da tela de login do usuário
+
+.login-section {
+  min-height: 100vh;
+
+  @extend .almocai;
+  @extend .branco; 
+
+  &__container {
+    height: 100%;
+    width: 100% !important;
+  }
+
+  &__imagem {
+    -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+    background: linear-gradient(135deg, rgba($primary-color-light, 0.5), rgba($primary-color-dark, 0.5)), url("../img/entrar/fundo.jpg");
+    background-position: left;
+    background-size: cover;
+    height: 100%;
+  }
+
+  &__valign {
+    height: 100%;
+  }
+
+  &__padding-zero {
+    padding: 0 0.3rem !important;
+    @media #{$medium-and-down} {
+      padding: 0 !important;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin: 1rem auto 1rem auto;
+    @extend .z-depth-3;
+    &:hover {
+      @extend .z-depth-2;
+    }
+    &:active, :focus {
+      @extend .z-depth-0;
+    }
+  }
+
+  &__modal {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#f42f4b), color-stop(#e42740), color-stop(#d41e36), color-stop(#c4152c), to(#b40922));
+    background-image: linear-gradient(to right bottom, #f42f4b, #e42740, #d41e36, #c4152c, #b40922);
+    color: $branco;
+
+    &--title {
+      font-size: 2rem;
+    }
+
+    &--text {
+      font-size: 1.25rem;
+    }
+
+    &--btn {
+      @extend .almocai;
+      @extend .branco;
+      @extend .almocai-text;
+      @extend .text-vermelho;
+      @extend .bold;
+      @extend .z-depth-3;
+      @extend .waves-effect;
+      @extend .waves-light;
+      @extend .btn;
+      @extend .right;
+
+      margin: 1.5rem 0 1.5rem 0;
+      &:hover {
+        @extend .z-depth-2;
+      }
+      &:active, :focus {
+        @extend .z-depth-0;
+      }
+    }
+
+  }
+
+}
+
+.esqueci-senha {
+  color: $primary-color;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+  letter-spacing: .05rem;
+  border-bottom: .05rem solid $primary-color;
+  &:hover {
+    color: $primary-color-dark;
+    border-bottom: .05rem solid $primary-color-dark;
+  }
+  @media #{$large-and-up} {
+    margin-left: .2rem;
+  }
+}
+
+.entrar__sobre-container {
+
+  position: relative;
+
+  &--link {
+    font-size: 1rem;
+    color: $primary-color;
+    -webkit-transition: color .3s ease-in;
+    transition: color .3s ease-in;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    line-height: normal;
+    &:hover, &:focus {
+      color: $primary-color-dark;
+    }
+  }
+
+}

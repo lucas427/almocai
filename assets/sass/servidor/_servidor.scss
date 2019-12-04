@@ -1,0 +1,14 @@
+.servidor {
+  &__subtitulo {
+    @extend .center;
+    padding: 1rem;
+    font-size: 1.75rem;
+  }
+  &__quantidade {
+    padding: 1rem;
+    @extend .center;
+    @extend .nunito;
+    @extend .almocai-text;
+    font-size: 8rem;
+  }
+}

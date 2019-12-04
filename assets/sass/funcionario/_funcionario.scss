@@ -1,0 +1,145 @@
+.funcionario {
+  
+  margin-top: 1.5rem;
+
+  &__card {
+    @extend .card;
+    @extend .hoverable;
+    display: grid;
+    @extend .no-select;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    min-height: 22rem;
+
+    &--title {
+      margin: 1rem 0 0 0;
+      text-align: center;
+      font-size: 2rem;
+      padding: 0 1rem 0 1rem;
+    }
+
+    &--qtd {
+      @extend .nunito;
+      text-align: center;
+      font-size: 10rem;
+      padding: 0;
+      margin: 0;
+    }
+
+  }
+
+  &__semana {
+    @extend .card;
+    @extend .hoverable;
+    padding: 1.5rem;
+    min-height: 17.5rem;
+    display: grid;
+    -ms-flex-line-pack: center;
+        align-content: center;
+
+    &--title {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 1rem !important;
+      font-size: 2rem;
+      @extend .nunito;
+      @extend .almocai-text;
+    }
+
+    &--data {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 1rem !important;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    &--subdata {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 1rem !important;
+      font-size: 2rem;
+      font-weight: 200;
+    }
+
+  }
+
+  &__cardapio-add {
+    @extend .card;
+    @extend .hoverable;
+    padding: 1.5rem;
+    margin: 0 !important;
+
+    &--title {
+      padding: 1rem;
+      margin: 0;
+      @extend .center;
+      @extend .nunito;
+      @extend .almocai-text;
+    }
+
+    &--card {
+      @extend .card;
+      @extend .hoverable;
+      margin-top: 0 !important;
+      padding: 1.5rem;
+      margin-bottom: 1rem !important;
+
+      &--title {
+        font-size: 2.5rem;
+        @extend .nunito;
+        @extend .almocai-text;
+      }
+
+      &--subtitle {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      
+      &--data {
+        font-size: 1.25rem;
+        font-weight: 200;
+      }
+
+    }
+
+    &--lista {
+      line-height: 3;
+      li {
+        font-size: 1rem;
+
+        i {
+          -webkit-transform: translateY(.45rem);
+                  transform: translateY(.45rem);
+        }
+
+        &:not(:last-child) {
+          border-bottom: .1rem solid #C5C5C5;
+        }
+      }
+    }
+
+  }
+
+}
+
+.legenda {
+	border-radius: 8px;
+}
+
+.validada {
+	background-color: rgba(67, 137, 69, .3);
+}
+
+.pendente {
+	background-color: rgba(235, 166, 63, .3);
+}
+
+.rejeitada {
+	background-color: rgba(228, 12, 43, .3);
+}
+
+.texto {
+  color: #1d1d2c;
+  font-size: 1rem;
+}
