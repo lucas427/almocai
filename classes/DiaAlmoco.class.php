@@ -70,7 +70,14 @@ class DiaAlmoco extends AbsCodigo {
 
 		if ($diaSemana_almoco >= $diaSemana_hoje) {
 			if ($diaSemana_hoje == $diaSemana_almoco)
-				return $hora_hoje <= 10;
+				return $hora_hoje <= 9;
+				/* Se se considera apenas a hora nessa verificação,
+				ela será verdadeira para qualquer momento em que é 9 horas
+				incluindo 9:59 - assim, a regra de negócio é satisfeita corretamente,
+				pois o usuário pode mudar a presença ATÉ 10h.
+				
+				Se fosse considerado $hora_hoje <= 10, a função retornaria
+				true inclusive para 10:59, o que não satisfaz a regra. */
 			else 
 				return true;
 		} else 
